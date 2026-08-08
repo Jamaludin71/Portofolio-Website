@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Hilmy Dzakya | Fullstack Developer & Data Engineer</title>
+    <meta name="description" content="Fullstack Developer, Data Engineer, Linux Administrator, and Cybersecurity Enthusiast from Indonesia.">
+    <meta name="keywords" content="Fullstack Developer, Data Engineer, Linux Admin, Cybersecurity, Indonesia, Yogyakarta">
+    <meta name="author" content="Muhammad Hilmy Dzakya">
+    <meta property="og:title" content="Muhammad Hilmy Dzakya | Portfolio">
+    <meta property="og:description" content="Crafting secure digital systems across fullstack, data, and infrastructure.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="scanlines"></div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">MHD</span>
+                <span class="logo-bracket">]</span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-key="nav_home">HOME</a>
+                <a href="#about" class="nav-link" data-key="nav_about">ABOUT</a>
+                <a href="#skills" class="nav-link" data-key="nav_skills">SKILLS</a>
+                <a href="#projects" class="nav-link" data-key="nav_projects">PROJECTS</a>
+                <a href="#experience" class="nav-link" data-key="nav_experience">EXPERIENCE</a>
+                <a href="#blog" class="nav-link" data-key="nav_blog">BLOG</a>
+                <a href="#hire" class="nav-link nav-cta" data-key="nav_hire">HIRE_ME</a>
+            </div>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+                    <span class="lang-current">EN</span>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title">root@hilmydzakya:~</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">$</span>
+                        <span class="terminal-command" id="type-command"></span>
+                        <span class="terminal-cursor">_</span>
+                    </div>
+                    <div class="terminal-output" id="terminal-output">
+                        <div class="output-line hidden" data-delay="1">
+                            <span class="text-cyan">[SYSTEM]</span> <span data-key="hero_loading">Initializing profile...</span>
+                        </div>
+                        <div class="output-line hidden" data-delay="2">
+                            <span class="text-purple">[IDENTITY]</span> Muhammad Hilmy Dzakya
+                        </div>
+                        <div class="output-line hidden" data-delay="3">
+                            <span class="text-cyan">[ROLE]</span> <span data-key="hero_role">Fullstack Developer & Data Engineer</span>
+                        </div>
+                        <div class="output-line hidden" data-delay="4">
+                            <span class="text-purple">[LOCATION]</span> Sleman, D.I. Yogyakarta, Indonesia
+                        </div>
+                        <div class="output-line hidden" data-delay="5">
+                            <span class="text-cyan">[STATUS]</span> <span class="status-active" data-key="hero_status">● AVAILABLE FOR OPPORTUNITIES</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-headline">
+                <h1 class="glitch-text" data-text="MUHAMMAD HILMY DZAKYA">MUHAMMAD HILMY DZAKYA</h1>
+                <p class="hero-subtitle" data-key="hero_subtitle">Fullstack Developer & Data Engineer crafting secure digital systems</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary"><span class="btn-icon">&gt;</span><span data-key="btn_view_projects">VIEW_PROJECTS</span></a>
+                    <a href="#hire" class="btn btn-secondary"><span class="btn-icon">&gt;</span><span data-key="btn_hire_me">HIRE_ME</span></a>
+                    <a href="mailto:dzakyam42@gmail.com" class="btn btn-outline"><span class="btn-icon">&gt;</span><span data-key="btn_contact">CONTACT</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span data-key="scroll_down">SCROLL_DOWN</span>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-key="tag_about">&lt;ABOUT_ME/&gt;</span>
+                <h2 class="section-title" data-key="title_about">SYSTEM_PROFILE</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <span class="placeholder-icon">&#128100;</span>
+                            <span class="placeholder-text" data-key="photo_placeholder">[PHOTO_PLACEHOLDER]</span>
+                            <span class="placeholder-sub" data-key="photo_sub">Upload your profile photo here</span>
+                        </div>
+                        <div class="frame-corners">
+                            <span class="corner tl"></span><span class="corner tr"></span>
+                            <span class="corner bl"></span><span class="corner br"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-card">
+                        <div class="card-header">
+                            <span class="card-icon">&#9889;</span>
+                            <span class="card-label" data-key="about_who">WHO_AM_I</span>
+                        </div>
+                        <p class="about-bio" data-key="about_bio">[Bio placeholder - Please provide your bio text. A passionate multidisciplinary engineer bridging the gap between frontend elegance, backend robustness, data intelligence, infrastructure reliability, and security awareness. Based in Sleman, Yogyakarta, Indonesia.]</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item"><span class="stat-number">4+</span><span class="stat-label" data-key="stat_domains">Domains</span></div>
+                        <div class="stat-item"><span class="stat-number">7+</span><span class="stat-label" data-key="stat_projects">Projects</span></div>
+                        <div class="stat-item"><span class="stat-number">5+</span><span class="stat-label" data-key="stat_certs">Certificates</span></div>
+                    </div>
+                    <div class="about-location">
+                        <span class="location-icon">&#128205;</span>
+                        <span>Sleman, D.I. Yogyakarta, Indonesia</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section skills" id="skills">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-key="tag_skills">&lt;SKILL_MATRIX/&gt;</span>
+                <h2 class="section-title" data-key="title_skills">CORE_COMPETENCIES</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-header"><span class="skill-icon">&#127760;</span><h3 data-key="skill_fullstack">FULLSTACK_WEB</h3></div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-name">React / Next.js</span><div class="skill-bar"><div class="skill-fill" style="--width:90%"></div></div><span class="skill-percent">90%</span></div>
+                        <div class="skill-item"><span class="skill-name">Node.js / Laravel</span><div class="skill-bar"><div class="skill-fill" style="--width:85%"></div></div><span class="skill-percent">85%</span></div>
+                        <div class="skill-item"><span class="skill-name">PostgreSQL / MongoDB</span><div class="skill-bar"><div class="skill-fill" style="--width:80%"></div></div><span class="skill-percent">80%</span></div>
+                        <div class="skill-item"><span class="skill-name">TypeScript / JavaScript</span><div class="skill-bar"><div class="skill-fill" style="--width:88%"></div></div><span class="skill-percent">88%</span></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-header"><span class="skill-icon">&#128202;</span><h3 data-key="skill_data">DATA_ENGINEERING</h3></div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-name">Python / SQL</span><div class="skill-bar"><div class="skill-fill" style="--width:85%"></div></div><span class="skill-percent">85%</span></div>
+                        <div class="skill-item"><span class="skill-name">Pandas / Spark</span><div class="skill-bar"><div class="skill-fill" style="--width:75%"></div></div><span class="skill-percent">75%</span></div>
+                        <div class="skill-item"><span class="skill-name">Airflow / dbt</span><div class="skill-bar"><div class="skill-fill" style="--width:70%"></div></div><span class="skill-percent">70%</span></div>
+                        <div class="skill-item"><span class="skill-name">BigQuery / Tableau</span><div class="skill-bar"><div class="skill-fill" style="--width:72%"></div></div><span class="skill-percent">72%</span></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-header"><span class="skill-icon">&#128187;</span><h3 data-key="skill_linux">LINUX_INFRASTRUCTURE</h3></div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-name">Ubuntu / Debian / Arch</span><div class="skill-bar"><div class="skill-fill" style="--width:88%"></div></div><span class="skill-percent">88%</span></div>
+                        <div class="skill-item"><span class="skill-name">Docker / Kubernetes</span><div class="skill-bar"><div class="skill-fill" style="--width:78%"></div></div><span class="skill-percent">78%</span></div>
+                        <div class="skill-item"><span class="skill-name">Nginx / Apache / CI/CD</span><div class="skill-bar"><div class="skill-fill" style="--width:82%"></div></div><span class="skill-percent">82%</span></div>
+                        <div class="skill-item"><span class="skill-name">AWS / Cloud Services</span><div class="skill-bar"><div class="skill-fill" style="--width:70%"></div></div><span class="skill-percent">70%</span></div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-header"><span class="skill-icon">&#128274;</span><h3 data-key="skill_cyber">CYBER_SECURITY</h3></div>
+                    <div class="skill-items">
+                        <div class="skill-item"><span class="skill-name">Penetration Testing</span><div class="skill-bar"><div class="skill-fill" style="--width:75%"></div></div><span class="skill-percent">75%</span></div>
+                        <div class="skill-item"><span class="skill-name">Kali Linux / Burp Suite</span><div class="skill-bar"><div class="skill-fill" style="--width:80%"></div></div><span class="skill-percent">80%</span></div>
+                        <div class="skill-item"><span class="skill-name">Network Security / Wireshark</span><div class="skill-bar"><div class="skill-fill" style="--width:78%"></div></div><span class="skill-percent">78%</span></div>
+                        <div class="skill-item"><span class="skill-name">Ghidra / Reverse Eng</span><div class="skill-bar"><div class="skill-fill" style="--width:65%"></div></div><span class="skill-percent">65%</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section projects" id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-key="tag_projects">&lt;MISSION_LOGS/&gt;</span>
+                <h2 class="section-title" data-key="title_projects">DEPLOYED_SYSTEMS</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder"><span class="project-icon">&#128499;</span><span class="project-label">E-VOTING</span></div>
+                        <div class="project-overlay"><div class="project-links"><a href="https://github.com/Jamaludin71/evotingpemilos_2026" target="_blank" class="project-link" rel="noopener"><span>CODE</span></a></div></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta"><span class="project-category" data-key="cat_fullstack">FULLSTACK</span><span class="project-year">2025</span></div>
+                        <h3 class="project-title">E-Voting PEMILOS 2026</h3>
+                        <p class="project-desc" data-key="desc_evoting">Online voting system for OSIS chair and vice-chair elections. Built to handle 3000+ concurrent users with real-time vote counting and secure authentication.</p>
+                        <div class="project-tech"><span class="tech-tag">Astro</span><span class="tech-tag">TypeScript</span><span class="tech-tag">JavaScript</span></div>
+                    </div>
+                </div>
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-placeholder"><span class="project-icon">&#128722;</span><span class="project-label">MARKETPLACE</span></div>
+                        <div class="project-overlay"><div class="project-links"><a href="https://simple-marketplace-three.vercel.app" target="_blank" class="project-link" rel="noopener"><span>LIVE</span></a><a href="https://github.com/Jamaludin71/simple_marketplace" target="_blank" class="project-link" rel="noopener"><span>CODE</span></a></div></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta"><span class="project-category" data-key="cat_fullstack">FULLSTACK</span><span class="project-year">2026</span></div>
+                        <h3 class="project-title">Simple Marketplace</h3>
+                        <p class="project-desc" data-key="desc_marketplace">Full-featured e-commerce marketplace with user authentication, product management, cart system, and order processing. Built with modern Next.js ecosystem.</p>
+                        <div class="project-tech"><span class="tech-tag">Next.js</span><span class="tech-tag">Prisma</span><span class="tech-tag">NextAuth</span><span class="tech-tag">TypeScript</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder"><span class="project-icon">&#129534;</span><span class="project-label">POS SYSTEM</span></div>
+                        <div class="project-overlay"><div class="project-links"><a href="https://github.com/Jamaludin71/POS-Kasir" target="_blank" class="project-link" rel="noopener"><span>CODE</span></a></div></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta"><span class="project-category" data-key="cat_fullstack">FULLSTACK</span><span class="project-year">2026</span></div>
+                        <h3 class="project-title">POS Kasir Warmindo</h3>
+                        <p class="project-desc" data-key="desc_pos">Modern cashier management system for Warmindo (Warung Indomie) with inventory tracking, sales reporting, and real-time transaction processing.</p>
+                        <div class="project-tech"><span class="tech-tag">React</span><span class="tech-tag">Supabase</span><span class="tech-tag">JavaScript</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder"><span class="project-icon">&#127769;</span><span class="project-label">TRACKER</span></div>
+                        <div class="project-overlay"><div class="project-links"><a href="https://github.com/Jamaludin71/Ramadhan-Tracker" target="_blank" class="project-link" rel="noopener"><span>CODE</span></a></div></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta"><span class="project-category" data-key="cat_fullstack">FULLSTACK</span><span class="project-year">2026</span></div>
+                        <h3 class="project-title">Ramadhan Tracker</h3>
+                        <p class="project-desc" data-key="desc_ramadhan">Productivity tracking web application for Ramadhan month featuring daily activity logs, prayer time reminders, and progress visualization.</p>
+                        <div class="project-tech"><span class="tech-tag">JavaScript</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Supabase</span></div>
+                    </div>
+                </div>
+                <div class="project-card cyber">
+                    <div class="project-image">
+                        <div class="project-placeholder"><span class="project-icon">&#128737;</span><span class="project-label">VULN_LAB</span></div>
+                        <div class="project-overlay"><div class="project-links"><a href="https://github.com/Jamaludin71/Presensi-Vuln" target="_blank" class="project-link" rel="noopener"><span>CODE</span></a></div></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta"><span class="project-category" data-key="cat_cyber">CYBERSEC</span><span class="project-year">2026</span></div>
+                        <h3 class="project-title">Presensi Vulnerability Lab</h3>
+                        <p class="project-desc" data-key="desc_vuln">Intentionally vulnerable attendance web application for cybersecurity practice. Designed for learning penetration testing techniques including SQL injection and security bypass.</p>
+                        <div class="project-tech"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag vuln-tag">nmap</span><span class="tech-tag vuln-tag">sqlmap</span></div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder"><span class="project-icon">&#128290;</span><span class="project-label">CALCULATOR</span></div>
+                        <div class="project-overlay"><div class="project-links"><a href="https://github.com/Jamaludin71/Kalkulator-Zakat" target="_blank" class="project-link" rel="noopener"><span>CODE</span></a></div></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta"><span class="project-category" data-key="cat_fullstack">FULLSTACK</span><span class="project-year">2026</span></div>
+                        <h3 class="project-title">Kalkulator Zakat</h3>
+                        <p class="project-desc" data-key="desc_zakat">Islamic zakat calculator supporting multiple zakat types including income, savings, gold, and business assets with automatic nisab detection.</p>
+                        <div class="project-tech"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section experience" id="experience">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-key="tag_exp">&lt;DEPLOYMENT_HISTORY/&gt;</span>
+                <h2 class="section-title" data-key="title_exp">EXPERIENCE_LOG</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">19 Jul 2026 – 20 Des 2026</div>
+                        <h3 class="timeline-title" data-key="exp_pkl_title">Praktik Kerja Lapangan (PKL)</h3>
+                        <div class="timeline-company">ICT FKIP Universitas Sebelas Maret (UNS)</div>
+                        <p class="timeline-desc" data-key="exp_pkl_desc">Internship at ICT Unit of FKIP UNS. Gained hands-on experience in IT infrastructure management, technical support, and system administration within an academic environment.</p>
+                        <div class="timeline-tech"><span class="tech-tag">System Admin</span><span class="tech-tag">IT Support</span><span class="tech-tag">Network</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section education" id="education">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-key="tag_edu">&lt;KNOWLEDGE_BASE/&gt;</span>
+                <h2 class="section-title" data-key="title_edu">EDUCATION_CERTS</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-column">
+                    <h3 class="edu-subtitle" data-key="subtitle_edu">&#127891; EDUCATION</h3>
+                    <div class="edu-timeline">
+                        <div class="edu-item"><div class="edu-year">2023 – 2027</div><h4>SMK Negeri 2 Surakarta</h4><p data-key="edu_smk">Vocational High School - Software Engineering / Computer Science</p></div>
+                        <div class="edu-item"><div class="edu-year">2021 – 2023</div><h4>SMP Islam Al-Hadi</h4><p data-key="edu_smp">Junior High School</p></div>
+                        <div class="edu-item"><div class="edu-year">2016 – 2021</div><h4>SD Baitul Makmur</h4><p data-key="edu_sd">Elementary School</p></div>
+                    </div>
+                </div>
+                <div class="edu-column">
+                    <h3 class="edu-subtitle" data-key="subtitle_cert">&#127942; CERTIFICATES & ACHIEVEMENTS</h3>
+                    <div class="cert-grid">
+                        <div class="cert-card"><span class="cert-icon">&#127941;</span><h4 data-key="cert_ctf">CTF Amikom 2025</h4><p data-key="cert_ctf_desc">Participation in Capture The Flag cybersecurity competition</p></div>
+                        <div class="cert-card"><span class="cert-icon">&#128039;</span><h4>ADINUSA Linux SysAdmin</h4><p data-key="cert_linux_desc">Linux System Administration course completion</p></div>
+                        <div class="cert-card"><span class="cert-icon">&#128051;</span><h4>ADINUSA Docker Fundamental</h4><p data-key="cert_docker_desc">Docker containerization fundamentals</p></div>
+                        <div class="cert-card"><span class="cert-icon">&#9881;&#65039;</span><h4>ADINUSA Ansible Automation</h4><p data-key="cert_ansible_desc">Automation with Ansible course completion</p></div>
+                        <div class="cert-card"><span class="cert-icon">&#128220;</span><h4 data-key="cert_osis">OSIS Membership</h4><p data-key="cert_osis_desc">Student Organization membership certificate - SMP</p></div>
+                        <div class="cert-card"><span class="cert-icon">&#128220;</span><h4 data-key="cert_mpk">MPK Membership</h4><p data-key="cert_mpk_desc">Student Council membership certificate - SMK</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section blog" id="blog">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-key="tag_blog">&lt;KNOWLEDGE_BASE/&gt;</span>
+                <h2 class="section-title" data-key="title_blog">WRITEUPS_LOGS</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-meta"><span class="blog-category">CYBERSEC</span><span class="blog-date">2026</span></div>
+                    <h3 class="blog-title" data-key="blog_1_title">Building Intentionally Vulnerable Apps for Learning</h3>
+                    <p class="blog-excerpt" data-key="blog_1_desc">How I created Presensi-Vuln as a hands-on cybersecurity lab for practicing penetration testing techniques safely.</p>
+                    <div class="blog-tags"><span class="tech-tag">PenTest</span><span class="tech-tag">PHP</span><span class="tech-tag">Education</span></div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta"><span class="blog-category">LINUX</span><span class="blog-date">2026</span></div>
+                    <h3 class="blog-title" data-key="blog_2_title">From Ubuntu to Arch: My Linux Journey</h3>
+                    <p class="blog-excerpt" data-key="blog_2_desc">Documenting my transition through various Linux distributions and what each taught me about system administration.</p>
+                    <div class="blog-tags"><span class="tech-tag">Linux</span><span class="tech-tag">SysAdmin</span><span class="tech-tag">Arch</span></div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta"><span class="blog-category">FULLSTACK</span><span class="blog-date">2026</span></div>
+                    <h3 class="blog-title" data-key="blog_3_title">Scaling E-Voting for 3000+ Users</h3>
+                    <p class="blog-excerpt" data-key="blog_3_desc">Architecture decisions and challenges faced when building a voting system capable of handling thousands of concurrent users.</p>
+                    <div class="blog-tags"><span class="tech-tag">Astro</span><span class="tech-tag">Performance</span><span class="tech-tag">Architecture</span></div>
+                </article>
+            </div>
+            <div class="blog-more"><p class="blog-note" data-key="blog_note">More writeups coming soon on Medium/Dev.to...</p></div>
+        </div>
+    </section>
+
+    <section class="section hire" id="hire">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-key="tag_hire">&lt;CONTRACT_AVAILABLE/&gt;</span>
+                <h2 class="section-title" data-key="title_hire">HIRE_ME</h2>
+                <div class="section-line"></div>
+            </div>
+            <p class="hire-intro" data-key="hire_intro">Available for freelance projects and collaborations. I bring multidisciplinary expertise across the entire stack — from frontend interfaces to backend systems, data pipelines, infrastructure, and security audits.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">&#127760;</div>
+                    <h3 data-key="svc_web_title">Web Development</h3>
+                    <p data-key="svc_web_desc">Fullstack web applications, landing pages, dashboards, and e-commerce platforms built with modern technologies.</p>
+                    <ul class="service-list"><li>React / Next.js / Laravel</li><li>API Development</li><li>Database Design</li></ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128202;</div>
+                    <h3 data-key="svc_data_title">Data Solutions</h3>
+                    <p data-key="svc_data_desc">Data pipelines, ETL processes, analytics dashboards, and database optimization for your business intelligence needs.</p>
+                    <ul class="service-list"><li>ETL Pipeline</li><li>Data Visualization</li><li>SQL Optimization</li></ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128187;</div>
+                    <h3 data-key="svc_infra_title">Infrastructure</h3>
+                    <p data-key="svc_infra_desc">Server setup, deployment automation, containerization, and CI/CD pipeline configuration.</p>
+                    <ul class="service-list"><li>Docker / Kubernetes</li><li>Linux Server Setup</li><li>CI/CD Pipelines</li></ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">&#128274;</div>
+                    <h3 data-key="svc_sec_title">Security Audit</h3>
+                    <p data-key="svc_sec_desc">Basic vulnerability assessments, penetration testing, and security awareness training for your applications.</p>
+                    <ul class="service-list"><li>Vulnerability Scan</li><li>Web App Pentest</li><li>Security Review</li></ul>
+                </div>
+            </div>
+            <div class="hire-cta">
+                <a href="mailto:dzakyam42@gmail.com?subject=Project%20Inquiry" class="btn btn-primary btn-large"><span class="btn-icon">&gt;</span><span data-key="btn_start_project">START_A_PROJECT</span></a>
+                <a href="https://wa.me/6288232109086" target="_blank" class="btn btn-secondary btn-large" rel="noopener"><span class="btn-icon">&gt;</span><span>WhatsApp</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag" data-key="tag_contact">&lt;ESTABLISH_CONNECTION/&gt;</span>
+                <h2 class="section-title" data-key="title_contact">CONTACT_NODE</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+                        <div class="terminal-title">contact.sh</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line"><span class="terminal-prompt">$</span><span class="terminal-command">echo $CONTACT_INFO</span></div>
+                        <div class="contact-info-list">
+                            <div class="contact-row"><span class="contact-key">EMAIL:</span><a href="mailto:dzakyam42@gmail.com" class="contact-value">dzakyam42@gmail.com</a></div>
+                            <div class="contact-row"><span class="contact-key">GITHUB:</span><a href="https://github.com/Jamaludin71" target="_blank" class="contact-value" rel="noopener">github.com/Jamaludin71</a></div>
+                            <div class="contact-row"><span class="contact-key">LINKEDIN:</span><a href="https://www.linkedin.com/in/muhammad-hilmy-dzakya-9259522a8" target="_blank" class="contact-value" rel="noopener">Muhammad Hilmy Dzakya</a></div>
+                            <div class="contact-row"><span class="contact-key">WHATSAPP:</span><a href="https://wa.me/6288232109086" target="_blank" class="contact-value" rel="noopener">+62 882-3210-9086</a></div>
+                            <div class="contact-row"><span class="contact-key">LOCATION:</span><span class="contact-value">Sleman, D.I. Yogyakarta, Indonesia</span></div>
+                        </div>
+                        <div class="terminal-line" style="margin-top:1rem"><span class="terminal-prompt">$</span><span class="terminal-cursor">_</span></div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form" action="mailto:dzakyam42@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-group"><label class="form-label" data-key="form_name">NAME</label><input type="text" class="form-input" placeholder="your_name" required></div>
+                        <div class="form-group"><label class="form-label" data-key="form_email">EMAIL</label><input type="email" class="form-input" placeholder="your@email.com" required></div>
+                        <div class="form-group"><label class="form-label" data-key="form_subject">SUBJECT</label><input type="text" class="form-input" placeholder="Project_Inquiry" required></div>
+                        <div class="form-group"><label class="form-label" data-key="form_message">MESSAGE</label><textarea class="form-input form-textarea" placeholder="Describe your project..." required></textarea></div>
+                        <button type="submit" class="btn btn-primary form-submit"><span class="btn-icon">&gt;</span><span data-key="btn_send">SEND_MESSAGE</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand"><span class="footer-logo">[MHD]</span><p class="footer-tagline" data-key="footer_tagline">Crafting secure digital systems across the stack.</p></div>
+                <div class="footer-links"><h4 data-key="footer_nav">NAVIGATION</h4><a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#hire">Hire Me</a></div>
+                <div class="footer-links"><h4 data-key="footer_social">SOCIAL</h4><a href="https://github.com/Jamaludin71" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/muhammad-hilmy-dzakya-9259522a8" target="_blank" rel="noopener">LinkedIn</a><a href="https://wa.me/6288232109086" target="_blank" rel="noopener">WhatsApp</a></div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright"><span class="text-cyan">&lt;/&gt;</span> <span data-key="footer_copy">2026 Muhammad Hilmy Dzakya. All systems operational.</span></p>
+                <p class="footer-tech">Built with HTML, CSS, JS + Cyberpunk vibes</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
